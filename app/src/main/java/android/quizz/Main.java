@@ -24,7 +24,7 @@ public class Main extends AppCompatActivity {
                 final String n = name.getText().toString();
                 if(n.isEmpty()){Toast.makeText(getApplicationContext(),"Nope",Toast.LENGTH_SHORT).show();}else{
                 Intent fi = new Intent(getApplicationContext(),First.class);
-                fi.putExtra("Name",name.toString());
+                fi.putExtra("Name",name.getText().toString());
                 startActivity(fi);}
             }
         });

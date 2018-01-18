@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.jar.Attributes;
+
 public class First extends AppCompatActivity {
     Button b1,b2,b3,b4;
     @Override
@@ -18,7 +20,7 @@ public class First extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
-        final int sc=10;
+        final String sc="10";
         b1=(Button)findViewById(R.id.b1);
         b2=(Button)findViewById(R.id.b2);
         b3=(Button)findViewById(R.id.b3);
@@ -27,6 +29,8 @@ public class First extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(),Loss.class);
+                String etname=getIntent().getStringExtra("Name");
+                i.putExtra("Name", etname);
                 i.putExtra("Score",sc);
                 startActivity(i);
             }
@@ -35,6 +39,8 @@ public class First extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(),Loss.class);
+                String etname=getIntent().getStringExtra("Name");
+                i.putExtra("Name", etname);
                 i.putExtra("Score",sc);
                 startActivity(i);
             }
@@ -43,6 +49,8 @@ public class First extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(),Loss.class);
+                String etname=getIntent().getStringExtra("Name");
+                i.putExtra("Name", etname);
                 i.putExtra("Score",sc);
                 startActivity(i);
             }
@@ -51,6 +59,8 @@ public class First extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(),Second.class);
+                String etname=getIntent().getStringExtra("Name");
+                i.putExtra("Name", etname);
                 startActivity(i);
             }
         });

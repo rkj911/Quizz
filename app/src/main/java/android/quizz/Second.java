@@ -18,7 +18,7 @@ public class Second extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        final int sc=20;
+        final String sc="20";
         b1=(Button)findViewById(R.id.b1);
         b2=(Button)findViewById(R.id.b2);
         b3=(Button)findViewById(R.id.b3);
@@ -27,6 +27,8 @@ public class Second extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(),Loss.class);
+                String etname=getIntent().getStringExtra("Name");
+                i.putExtra("Name", etname);
                 i.putExtra("Score",sc);
                 startActivity(i);
             }
@@ -35,6 +37,8 @@ public class Second extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(),Loss.class);
+                String etname=getIntent().getStringExtra("Name");
+                i.putExtra("Name", etname);
                 i.putExtra("Score",sc);
                 startActivity(i);
             }
@@ -43,6 +47,8 @@ public class Second extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(),Loss.class);
+                String etname=getIntent().getStringExtra("Name");
+                i.putExtra("Name", etname);
                 i.putExtra("Score",sc);
                 startActivity(i);
             }
@@ -51,6 +57,8 @@ public class Second extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(),Second.class);
+                String etname=getIntent().getStringExtra("Name");
+                i.putExtra("Name", etname);
                 startActivity(i);
             }
         });
