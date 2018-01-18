@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Main extends AppCompatActivity {
     Button str;
@@ -20,10 +21,12 @@ public class Main extends AppCompatActivity {
         str.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final String n = name.getText().toString();
+                if(n.isEmpty()){Toast.makeText(getApplicationContext(),"Nope",Toast.LENGTH_SHORT).show();}else{
                 Intent fi = new Intent(getApplicationContext(),First.class);
                 fi.putExtra("Name",name.toString());
-                startActivity(fi);
+                startActivity(fi);}
             }
         });
-    }
-}
+    }}
+
